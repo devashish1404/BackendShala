@@ -13,5 +13,5 @@ connectDB();
 app.get("/", (req,res) => res.send("API is Running...."));
 
 
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server is runinng on port  ${PORT} `));
