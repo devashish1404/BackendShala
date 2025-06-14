@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
-//const routes = require("../src/Routes/routes");
+const routes = require("./src/routes/routes");
 
 const cors = require("cors");
 const { config } = require("dotenv");
@@ -12,7 +12,7 @@ config({
 });
 
 app.use(cors({
-  origin: "*", // <-- You already added this, but ensure it’s applied BEFORE routes
+  origin: "*",
   methods: ["GET", "POST", "PUT","PATCH","DELETE"],
   allowedHeaders: ["Content-Type", "x-auth-token"],
 }));
@@ -31,7 +31,7 @@ try {
   console.log("SlnkoEnergy database is connected");
 
 
-//   app.use("/v1", routes);
+  app.use("/v1", routes);
 
   // Start the server
   app.listen(PORT, () => {
