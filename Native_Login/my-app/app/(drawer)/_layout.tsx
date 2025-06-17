@@ -8,7 +8,7 @@ const DrawerLayout = () => {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer>
         <Drawer.Screen name='index' />
-        <Drawer.Screen name='about' />
+        <Drawer.Screen name='service' />
       </Drawer>
     </GestureHandlerRootView>
   )
