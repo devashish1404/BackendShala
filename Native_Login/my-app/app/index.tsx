@@ -5,13 +5,13 @@ export default function Index() {
   return (
     <View
       style={{
-        flex: 1,
+       flex:1,
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Text style={{fontSize:20 , fontWeight:"bold"}}>Welcome to Dashboard</Text>
-      <Link href="/about">Go to About</Link>
+      <Text style={{fontSize:25 , fontWeight:"bold"}}>Welcome to Dashboard</Text>
+      
 
     </View>
   );
