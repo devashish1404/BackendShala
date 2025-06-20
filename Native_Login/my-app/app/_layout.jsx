@@ -12,6 +12,6 @@ const RootLayout = () => {
       </SafeScreen>
     </ClerkProvider>
   );
-};
+};                                                                
 
 export default RootLayout;
