@@ -1,24 +1,20 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { COLORS } from "@/constants/colors";
+import React from 'react';
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 
 const SafeScreen = ({ children }) => {
-  const insets = useSafeAreaInsets();
   return (
-    <SafeScreen
-      style={{
-        paddingTop: insets.top,
-        flex: 1,
-        backgroundColor: COLORS.background,
-      }}
-    >
-    <View>
-      <Text>Hello</Text>
-    </View>
-      
-    </SafeScreen>
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      {children}
+    </SafeAreaView>
   );
 };
 
 export default SafeScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
