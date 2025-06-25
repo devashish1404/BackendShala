@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
 import SafeScreen from "@/components/SafeScreen";
+import { Link } from "expo-router";
 
 export default function Index() {
   return (
@@ -12,8 +13,11 @@ export default function Index() {
         }}
       >
         <Text style={{ fontSize: 25, fontWeight: "bold" }}>
-          Welcome to Dashboard
+          Welcome to Dashboard again
         </Text>
+        <Link href="/(auth)/signin" style={{ color: 'blue', marginTop: 10 }}>
+          Go to Sign In
+        </Link>
       </View>
     </SafeScreen>
   );
